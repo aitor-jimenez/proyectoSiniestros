@@ -9,6 +9,10 @@ public class ConsoleIOManager implements IOManager {
 
     private Scanner scanner;
 
+    public ConsoleIOManager() {
+        this.scanner = new Scanner(System.in);
+    }
+
     public void write(String message) {
         System.out.println(message);
     }

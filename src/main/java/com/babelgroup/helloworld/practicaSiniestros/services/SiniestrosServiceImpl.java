@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class SiniestrosServiceImpl implements SiniestrosService {
     @Autowired
     BienesService bienesService;
 
-    private List<Siniestro> siniestros;
+    private List<Siniestro> siniestros = new ArrayList<>();
 
     public void addSiniestro(Siniestro siniestro) {
         this.siniestros.add(siniestro);

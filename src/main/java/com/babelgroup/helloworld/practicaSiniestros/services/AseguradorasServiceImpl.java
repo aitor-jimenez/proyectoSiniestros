@@ -11,11 +11,11 @@ import java.util.Scanner;
 @Service
 public class AseguradorasServiceImpl implements AseguradorasService {
 
-    private List<Siniestro> siniestros;
+    private SiniestrosService siniestrosService;
     private Map<String, Aseguradora> aseguradoras;
 
-    public AseguradorasServiceImpl(List<Siniestro> siniestros, Map<String, Aseguradora> aseguradoras) {
-        this.siniestros = siniestros;
+    public AseguradorasServiceImpl(SiniestrosService siniestrosService, Map<String, Aseguradora> aseguradoras) {
+        this.siniestrosService = siniestrosService;
         this.aseguradoras = aseguradoras;
     }
 
@@ -33,11 +33,11 @@ public class AseguradorasServiceImpl implements AseguradorasService {
         }
 
         System.out.println("Elija un siniestro:");
-        for (int i = 0; i < siniestros.size(); i++) {
-            System.out.println((i + 1) + ". " + siniestros.get(i).getBienAfectado().getNombre());
+        for (int i = 0; i < siniestrosService.getSiniestros().size(); i++) {
+            System.out.println((i + 1) + ". " + siniestrosService.getSiniestros().get(i).getBienAfectado().getNombre());
         }
         int siniestroChoice = scanner.nextInt();
-        Siniestro siniestroElegido = siniestros.get(siniestroChoice - 1);
+        Siniestro siniestroElegido = siniestrosService.getSiniestros().get(siniestroChoice - 1);
 
         procesarSiniestro(siniestroElegido, aseguradoraElegida);
     }
