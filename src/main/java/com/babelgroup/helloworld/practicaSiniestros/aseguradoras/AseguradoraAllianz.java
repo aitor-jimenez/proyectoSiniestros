@@ -2,12 +2,14 @@ package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
 
 import com.babelgroup.helloworld.practicaSiniestros.bienes.Bien;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
 
+@Component
 public class AseguradoraAllianz implements Aseguradora {
 
     private static final double BONIFICACION_VALOR = 1.05;

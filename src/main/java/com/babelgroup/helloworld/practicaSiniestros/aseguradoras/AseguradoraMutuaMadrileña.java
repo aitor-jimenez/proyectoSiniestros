@@ -1,8 +1,11 @@
 package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;
+import org.springframework.stereotype.Component;
+
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
+@Component
 public class AseguradoraMutuaMadrileña implements Aseguradora{
     //Para la mutua el valor residual será del 10%
 

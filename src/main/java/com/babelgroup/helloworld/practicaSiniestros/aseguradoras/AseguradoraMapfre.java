@@ -2,10 +2,12 @@ package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
 
 import com.babelgroup.helloworld.practicaSiniestros.bienes.Bien;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+@Component
 public class AseguradoraMapfre implements Aseguradora {
     private static final double VALOR_RESIDUAL = 0.17;
 
