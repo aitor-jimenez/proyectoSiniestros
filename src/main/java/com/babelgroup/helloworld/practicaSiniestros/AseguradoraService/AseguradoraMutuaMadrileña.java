@@ -1,6 +1,7 @@
 package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;
 import java.time.temporal.ChronoUnit;
+import java.util.concurrent.TimeUnit;
 
 public class AseguradoraMutuaMadrileña implements Aseguradora{
     //Para la mutua el valor residual será del 10%
@@ -17,8 +18,9 @@ public class AseguradoraMutuaMadrileña implements Aseguradora{
         int añosAmortizacion = siniestro.getBienAfectado().getAmortizacion() * 2;
 
         // Cálculo de años transcurridos desde la compra (como número real)
-        double diasTranscurridos = ChronoUnit.DAYS.between(siniestro.getBienAfectado().getFechaAdquisicion(),
-                siniestro.getFechaSiniestro());
+        long diferenciaEnMs = siniestro.getFechaSiniestro().getTime()
+                - siniestro.getBienAfectado().getFechaAdquisicion().getTime();
+        long diasTranscurridos = TimeUnit.MILLISECONDS.toDays(diferenciaEnMs);
         double añosTranscurridos = diasTranscurridos / 365.0;
 
         // El primer año (año 0) no hay depreciación
