@@ -1,4 +1,4 @@
-package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
+package com.babelgroup.helloworld.practicaSiniestros.aseguradoras;
 
 import com.babelgroup.helloworld.practicaSiniestros.bienes.Bien;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;

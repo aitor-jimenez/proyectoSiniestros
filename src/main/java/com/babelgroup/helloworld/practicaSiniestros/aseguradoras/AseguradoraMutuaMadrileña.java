@@ -1,8 +1,7 @@
-package com.babelgroup.helloworld.practicaSiniestros.AseguradoraService;
+package com.babelgroup.helloworld.practicaSiniestros.aseguradoras;
 import com.babelgroup.helloworld.practicaSiniestros.siniestros.Siniestro;
 import org.springframework.stereotype.Component;
 
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
 @Component
